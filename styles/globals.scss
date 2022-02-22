@@ -1,0 +1,720 @@
+/* ------------------------ */
+/* Table of contents        */
+/* ------------------------ */
+/* 1. Properties            */
+/* 2. Boilerplate           */
+/* 3. Layout                */
+/* 4. Components            */
+/* 4.1. Header              */
+/* 4.2. Hero                */
+/* 4.3. Skills              */
+/* 4.4. Technologies        */
+/* 4.5. CTA Projects        */
+/* 4.6. Footer              */
+/* 5. Typography            */
+/* 6. Utility               */
+/* 7. Queries               */
+/* ------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+
+
+/* ------------------------ */
+/* 1.PROPERTIES             */
+/* ------------------------ */
+
+:root {
+    --font-size: 24px;
+    --font-family: 'Zen Kaku Gothic Antique', sans-serif;
+
+    --color-sat: 113;
+
+    --header-light: hsl(113deg 60% 82%);
+
+    --text1-light: hsl(113, 100%, 10%);
+    --text2-light: hsl(113, 30%, 30%);
+
+    --surface1-light: hsl(113, 25%, 90%);
+    --surface2-light: hsl(113, 20%, 99%);
+    --surface3-light: hsl(113, 20%, 92%);
+    --surface4-light: hsl(113, 20%, 85%);
+
+    --surface-shadow-light: hsla(114, 10%, 20%, 0.15);
+    --shadow-strength-light: .02;
+
+    --html-dark: hsl(14, 79%, 52%);
+    --html-light: hsl(18, 88%, 90%);
+    --css-dark: hsl(204, 88%, 38%);
+    --css-light: hsl(198, 100%, 75%);
+    --js-dark: hsl(39, 78%, 53%);
+    --js-light: hsl(45, 100%, 85%);
+}
+
+
+/* ------------------------ */
+/* 2.BOILERPLATE            */
+/* ------------------------ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ------------------------ */
+/* 3.LAYOUT                 */
+/* ------------------------ */
+
+body {
+    background-color: var(--surface1-light);
+}
+
+.wrapper {
+    min-width: 375px;
+    min-height: 100vh;
+    overflow-x: auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    width: 15.5rem;
+}
+
+.index {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 2rem;
+}
+
+
+/* ------------------------ */
+/* 4.COMPONENTS             */
+/* 4.1.HEADER               */
+/* ------------------------ */
+
+.header {
+    background-color: var(--header-light);
+}
+
+.header > .container {
+    height: 4rem;
+    padding-top: 1.25rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav {
+    display: flex;
+    column-gap: 1rem;
+    align-items: baseline;
+}
+
+.locale-switcher {
+    display: flex;
+    column-gap: .2rem;
+    cursor: pointer;
+}
+
+.locale-switcher__label {
+    font-size: .8rem;
+    cursor: inherit;
+}
+
+.locale-switcher__switch {
+    appearance: none;
+    border: none;
+    margin: 0;
+    cursor: inherit;
+
+    inline-size: 2.5rem;
+
+    display: grid;
+    grid-template-columns: [area1] 1fr [area2] 1fr;
+    place-items: center;
+}
+
+.locale-switcher__switch::before,
+.locale-switcher__switch::after {
+    font-size: .8rem;
+    display: grid;
+    align-items: center;
+}
+
+.locale-switcher__switch::before {
+    content: "En";
+    grid-area: area1;
+    font-weight: 700;
+}
+
+.locale-switcher__switch::after {
+    content: "Ru";
+    grid-area: area2;
+}
+
+.locale-switcher__switch.locale-ru {
+    &::before {
+        font-weight: 400;
+    }
+
+    &::after {
+        font-weight: 700;
+    }
+}
+
+.mobile-popup-btn {
+    position: relative;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    z-index: 5;
+}
+
+.mobile-popup {
+    background-color: var(--surface3-light);;
+    position: absolute;
+    top: 1rem; /* equals header padding-bottom */
+    left: 2rem; /* equals .mobile-popup-btn width + header padding-right */
+    transform: translateX(-100%);
+    padding: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    opacity: 0;
+    pointer-events: none;
+
+    font-size: 1rem;
+}
+
+.mobile-popup > * {
+    display: flex;
+    align-items: baseline;
+}
+
+.mobile-popup-btn:focus-within > .mobile-popup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.header {
+    & a:first-of-type > span {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    & a:last-of-type {
+        font-size: .9rem;
+    }
+}
+
+.header__misc {
+    display: none;
+}
+
+
+/* ------------------------ */
+/* 4.2.HERO                 */
+/* ------------------------ */
+
+.hero {
+    height: min(23rem, max(15rem, 80vh));
+    display: flex;
+}
+
+.hero > .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.5rem dashed var(--header-light);
+    justify-content: center;
+}
+
+
+/* ------------------------ */
+/* 4.3.SKILLS               */
+/* ------------------------ */
+
+.skill {
+    min-height: 40vh;
+
+    position: relative;
+}
+
+.skill__body {
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    outline-width: .5rem;
+    outline-style: dashed;
+
+    &.outline--html {
+        outline-color: var(--html-light);
+    }
+
+    &.outline--css {
+        outline-color: var(--css-light);
+    }
+
+    &.outline--js {
+        outline-color: var(--js-light);
+    }
+}
+
+.skill__body__title {
+    font-size: 1.2rem;
+}
+
+.skill__body > ul {
+    display: inline-block;
+}
+
+.skill__title {
+    position: relative;
+    top: 1rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    width: min-content;
+}
+
+
+/* ------------------------ */
+/* 4.4.TECHS                */
+/* ------------------------ */
+
+.techs {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+
+    // With .flex utility class
+    row-gap: 2rem !important;
+}
+
+.techs__scroller {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: 35%;
+    gap: .5rem;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+}
+
+.techs__card {
+    background-color: var(--surface3-light);
+    padding: .5rem;
+
+    scroll-snap-align: start;
+}
+
+.techs__card > * {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ------------------------ */
+/* 4.5.CTA PROJECTS         */
+/* ------------------------ */
+
+.cta-projects {
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    row-gap: 2rem !important;
+    overflow: hidden;
+}
+
+.cta-projects__body {
+    width: min-content;
+    align-self: center;
+
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: 1rem;
+}
+
+.cta-projects__link-github {
+    display: flex;
+    border-radius: 50%;
+    outline: 2px dashed var(--text1-light);
+    outline-offset: 5px;
+}
+
+.cta-projects__link-github:hover,
+.cta-projects__link-github:focus {
+    outline-style: solid;
+}
+
+
+/* ------------------------ */
+/* 4.6.FOOTER               */
+/* ------------------------ */
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+
+/* ------------------------ */
+/* 5.TYPOGRAPHY             */
+/* ------------------------ */
+
+html {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--text1-light);
+}
+
+.hero__desc-1,
+.hero__desc-2,
+.techs__subtitle,
+.cta-projects__note {
+    font-size: .85rem;
+    line-height: 130%;
+}
+
+.locale-switcher__switch::before,
+.locale-switcher__switch::after,
+.locale-switcher,
+.skill__body,
+.techs__subtitle,
+.techs__card,
+.footer__address {
+    color: var(--text2-light)
+}
+
+.skill__body > ul {
+    list-style: '. ';
+    text-align: left;
+    font-size: .85rem;
+    line-height: 140%;
+}
+
+.skill__body__title,
+.techs__body__title {
+    font-size: 1.15rem;
+}
+
+.skills__title,
+.techs__title,
+.cta-projects__title {
+    font-size: 1.25rem;
+}
+
+.cta-projects__link-projects {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(271, 68%, 32%);
+    border-bottom: 2px dashed var(--text1-light);
+}
+
+.link,
+.cta-projects__link-github {
+    color: hsl(271, 68%, 32%)
+}
+
+.cta-projects__link-github {
+    font-size: 3rem;
+}
+
+.cta-projects__note {
+    font-style: italic;
+}
+
+.cta-projects__note,
+.footer__address {
+    text-align: center;
+}
+
+.footer__address {
+    font-style: normal;
+    font-size: .75rem;
+    line-height: 145%;
+}
+
+.hero {
+    text-align: right;
+}
+
+
+/* ------------------------ */
+/* 6.UTILITY                */
+/* ------------------------ */
+
+@mixin absolute-block {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.shadow {    
+    box-shadow: .25rem .25rem .5rem rgb(0, 0, 0, 0.15);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.link {
+    border-bottom: 2px dashed var(--text1-light);
+}
+
+.link:hover,
+.link:focus {
+    border-bottom: 2px solid var(--text1-light);
+}
+
+.bg-gradient {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-gradient::before {
+    @include absolute-block;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    filter: blur(.25rem);
+    background: repeating-linear-gradient(135deg, 
+                    hsla(0, 0%, 100%, 0), 
+                    hsla(0, 0%, 100%, 0) 1rem,
+                    var(--surface-shadow-light) 1rem, 
+                    var(--surface-shadow-light) 2rem);
+}
+
+.bg-gradient::after {
+    @include absolute-block;
+    top: -.25rem;
+    left: -.25rem;
+    background: repeating-linear-gradient(135deg, 
+                    hsla(0, 0%, 100%, 0), 
+                    hsla(0, 0%, 100%, 0) 1rem,
+                    var(--surface3-light) 1rem, 
+                    var(--surface3-light) 2rem);
+    z-index: 3;
+}
+
+.bg-gradient > span {
+    position: relative;
+    z-index: 4;
+}
+
+.bg-gradient--html {
+    background-color: var(--html-light);
+}
+
+.bg-gradient--css {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--css-light);
+    display: flex;
+    align-items: center;
+
+    &,
+    &::before,
+    &::after {
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+}
+
+.bg-gradient--js {
+    margin-left: auto;
+    background-color: var(--js-light);
+}
+
+@mixin rotated-border--bottom {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        @include absolute-block;
+        z-index: -1;
+        border-bottom: 0.5rem dashed var(--header-light);
+        transform: rotate(45deg);
+    }
+}
+
+@mixin rotated-border--and-top {
+    &::after {
+        border-top: 0.5rem dashed var(--header-light);
+    }
+}
+
+@mixin techs-vertical-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+    width: 16rem;
+    height: 100%;
+    border-left: .5rem dashed var(--header-light);
+    padding-left: .5rem;
+}
+
+
+/* ------------------------ */
+/* 7.QUERIES                */
+/* ------------------------ */
+
+// Visual guides
+@media (min-width: 575px) {
+    .hero {
+        & > .container {
+            border-right: .5rem dashed var(--header-light);
+            padding-right: .5rem;
+        }
+
+        @include rotated-border--bottom;
+    }
+
+    .techs-vertical-border {
+        @include techs-vertical-border;
+    }
+
+    .cta-projects {
+        @include rotated-border--bottom;
+        @include rotated-border--and-top;
+    }
+
+    .footer--at-index {
+        border-right: .5rem dashed var(--header-light);
+        padding-right: .5rem !important;
+
+        & > .footer__address {
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: 475px) {
+    .techs__scroller {
+        grid-auto-columns: 27%;
+    }
+}
+
+@media (min-width: 575px) {
+    .skill:nth-of-type(1) {
+        left: -15vw;
+    }
+
+    .skill:nth-of-type(2) {
+        margin-top: -3rem;
+    }
+
+    .skill:nth-of-type(3) {
+        left: 15vw;
+        margin-top: -2rem;
+    }
+
+    .techs__scroller {
+        margin-top: 1rem;
+        grid-auto-columns: 22%;
+    }
+}
+
+@media (min-width: 675px) {
+    .techs__scroller {
+        margin-top: 2rem;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-columns: 5rem;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1440px) {
+    html {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header > .container {
+        align-items: baseline;
+        width: min(1024px, max(1rem, 65vw));
+        max-width: none;
+    }
+
+    .mobile-popup-btn {
+        display: none;
+    }
+
+    .header__misc {
+        display: flex;
+    }
+}

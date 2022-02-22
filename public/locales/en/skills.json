@@ -1,0 +1,22 @@
+{
+    "skills__title": "My competence consists in...",
+
+    "html--skill__body__title": "In markup, I pay attention to:",
+    "html--skill__body__li-1": "WC3's guidelines;",
+    "html--skill__body__li-2": "Accessibility;",
+    "html--skill__body__li-3": "Semantics;",
+    "html--skill__body__li-4": "ARIA.",
+
+    "css--skill__body__title": "In styles, I follow principles:",
+    "css--skill__body__li-1": "Responsiveness;",
+    "css--skill__body__li-2": "Cross-browser;",
+    "css--skill__body__li-3": "Mobile-first;",
+    "css--skill__body__li-4": "PostCSS;",
+    "css--skill__body__li-5": "BEM.",
+
+    "js--skill__body__title": "As a JS programmer I know:",
+    "js--skill__body__li-1": "DOM manipulation;",
+    "js--skill__body__li-2": "Async, fetch;",
+    "js--skill__body__li-3": "Webpack;",
+    "js--skill__body__li-4": "React."
+}
