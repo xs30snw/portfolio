@@ -137,7 +137,9 @@ html {
 .hero__desc-1,
 .hero__desc-2,
 .techs__subtitle,
-.cta-projects__note {
+.cta-projects__note,
+.project-card__excerpt,
+.projects__subtitle {
     font-size: .85rem;
     line-height: 130%;
 }
@@ -148,7 +150,8 @@ html {
 .skill__body,
 .techs__subtitle,
 .techs__card,
-.footer__address {
+.footer__address,
+.project-card__excerpt {
     color: var(--text2-light)
 }
 
@@ -157,6 +160,11 @@ html {
     text-align: left;
     font-size: .85rem;
     line-height: 140%;
+}
+
+.hero__title,
+.projects__title {
+    font-size: 1.5rem;
 }
 
 .skill__body__title,
@@ -186,16 +194,19 @@ html {
     font-size: 3rem;
 }
 
-.cta-projects__note {
+.cta-projects__note,
+.projects__subtitle {
     font-style: italic;
 }
 
 .cta-projects__note,
-.footer__address {
+.footer__address,
+.projects__subtitle {
     text-align: center;
 }
 
-.footer__address {
+.footer__address,
+.project-card__links {
     font-style: normal;
     font-size: .75rem;
     line-height: 145%;

@@ -9,6 +9,8 @@ import '../styles/techs.scss';
 import '../styles/ctaProjects.scss';
 import '../styles/footer.scss';
 
+import '../styles/projects.scss';
+
 function MyApp({ Component, pageProps }) {
     return (<>
         <Component {...pageProps} />

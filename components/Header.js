@@ -21,7 +21,11 @@ function Header() {
                             <span role='img' className='link'>xs30snw</span>
                         </a>
                     </Link>
-                    <a href='https://github.com/xs30snw' className='link' target='_blank' rel="noreferrer">{t('projects')}</a>
+                    <Link href='/projects' passHref>
+                        <a className='link'>
+                            {t('projects')}
+                        </a>
+                    </Link>
                 </nav>
 
                 <span className='mobile-popup-btn'
