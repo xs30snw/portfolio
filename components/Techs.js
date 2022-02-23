@@ -25,7 +25,9 @@ function Techs() {
                 </p>
             </header>
             <section className='techs__body'>
-                <h3 className='techs__body__title container'>{t('techs__body__title')}</h3>
+                <h3
+                    className='techs__body__title container'
+                    dangerouslySetInnerHTML={{ __html: t('techs__body__title') }} />
                 <div className='techs__scroller'>
                     <div className='techs__card shadow' role='img' aria-label='Linux'><IconLinux /></div>
                     <div className='techs__card shadow' role='img' aria-label='Git'><IconGit /></div>

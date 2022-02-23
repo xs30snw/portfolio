@@ -1,20 +1,20 @@
 {
-    "skills__title": "Среди моих навыков...",
+    "skills__title": "Среди моих<br />навыков...",
 
-    "html--skill__body__title": "В разметке, я забочусь о:",
+    "html--skill__body__title": "В разметке,<br />я забочусь о:",
     "html--skill__body__li-1": "Рекомендациях WC3;",
     "html--skill__body__li-2": "Доступности;",
     "html--skill__body__li-3": "Семантике;",
     "html--skill__body__li-4": "ARIA.",
 
-    "css--skill__body__title": "В стилях, я следую принципам:",
+    "css--skill__body__title": "В стилях,<br />я следую принципам:",
     "css--skill__body__li-1": "Кросс-браузерности;",
     "css--skill__body__li-2": "Адаптивности;",
     "css--skill__body__li-3": "Mobile-first;",
     "css--skill__body__li-4": "PostCSS;",
     "css--skill__body__li-5": "БЭМ.",
 
-    "js--skill__body__title": "Как JS программист я умею:",
+    "js--skill__body__title": "Как JS программист<br />я умею:",
     "js--skill__body__li-1": "Управлять DOM-ом;",
     "js--skill__body__li-2": "Async, fetch;",
     "js--skill__body__li-3": "Webpack;",

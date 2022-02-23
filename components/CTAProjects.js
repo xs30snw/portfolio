@@ -8,9 +8,9 @@ function CTAProjects() {
 
     return (
         <section className='cta-projects container flex'>
-            <h2 className='cta-projects__title'>
-                {t('cta-projects__title')}
-            </h2>
+            <h2
+                className='cta-projects__title'
+                dangerouslySetInnerHTML={{ __html: t('cta-projects__title') }} />
             <div className='cta-projects__body'>
                 <span className='cta-projects__link-projects'>
                     {t('cta-projects__link-projects')}
