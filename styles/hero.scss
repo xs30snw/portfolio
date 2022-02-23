@@ -1,0 +1,15 @@
+/* ------------------------ */
+/* HERO                     */
+/* ------------------------ */
+
+.hero {
+    height: min(23rem, max(15rem, 80vh));
+    display: flex;
+}
+
+.hero > .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.5rem dashed var(--header-light);
+    justify-content: center;
+}

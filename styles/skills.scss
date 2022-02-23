@@ -1,0 +1,69 @@
+/* ------------------------ */
+/* SKILLS                   */
+/* ------------------------ */
+
+.skill {
+    position: relative;
+}
+
+.skill__body {
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    outline-width: .5rem;
+    outline-style: dashed;
+
+    &.outline--html {
+        outline-color: var(--html-light);
+    }
+
+    &.outline--css {
+        outline-color: var(--css-light);
+    }
+
+    &.outline--js {
+        outline-color: var(--js-light);
+    }
+}
+
+.skill__body__title {
+    font-size: 1.2rem;
+}
+
+.skill__body > ul {
+    display: inline-block;
+}
+
+.skill__title {
+    position: relative;
+    top: 1rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    width: min-content;
+}
+
+
+/* ------------------------ */
+/* QUERIES                  */
+/* ------------------------ */
+
+@media (min-width: 575px) {
+    .skill:nth-of-type(1) {
+        left: -15vw;
+    }
+
+    .skill:nth-of-type(2) {
+        margin-top: -3rem;
+    }
+
+    .skill:nth-of-type(3) {
+        left: 15vw;
+        margin-top: -2rem;
+    }
+
+    .techs__scroller {
+        margin-top: 1rem;
+        grid-auto-columns: 22%;
+    }
+}

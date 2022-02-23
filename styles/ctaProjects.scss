@@ -1,0 +1,33 @@
+/* ------------------------ */
+/* CTA PROJECTS             */
+/* ------------------------ */
+
+.cta-projects {
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    row-gap: 2rem !important;
+    overflow: hidden;
+}
+
+.cta-projects__body {
+    width: min-content;
+    align-self: center;
+
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: 1rem;
+}
+
+.cta-projects__link-github {
+    display: flex;
+    border-radius: 50%;
+    outline: 2px dashed var(--text1-light);
+    outline-offset: 5px;
+}
+
+.cta-projects__link-github:hover,
+.cta-projects__link-github:focus {
+    outline-style: solid;
+}
