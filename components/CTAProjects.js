@@ -12,9 +12,11 @@ function CTAProjects() {
                 className='cta-projects__title'
                 dangerouslySetInnerHTML={{ __html: t('cta-projects__title') }} />
             <div className='cta-projects__body'>
-                <span className='cta-projects__link-projects'>
-                    {t('cta-projects__link-projects')}
-                </span>
+                <Link href='/projects' passHref>
+                    <a className='cta-projects__link-projects'>
+                        {t('cta-projects__link-projects')}
+                    </a>
+                </Link>
                 <a href='https://github.com/xs30snw' target='_blank' className='cta-projects__link-github' rel="noreferrer">
                     <IconGithub role='img' aria-label='GitHub' />
                 </a>
