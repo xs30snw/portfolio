@@ -15,8 +15,8 @@
     "css--skill__body__li-5": "BEM.",
 
     "js--skill__body__title": "As a JS programmer<br />I know:",
-    "js--skill__body__li-1": "DOM manipulation;",
-    "js--skill__body__li-2": "Async, fetch;",
-    "js--skill__body__li-3": "Webpack;",
+    "js--skill__body__li-1": "MVC scheme;",
+    "js--skill__body__li-2": "DOM nodes;",
+    "js--skill__body__li-3": "Async JS;",
     "js--skill__body__li-4": "React."
 }

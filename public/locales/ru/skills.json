@@ -15,8 +15,8 @@
     "css--skill__body__li-5": "БЭМ.",
 
     "js--skill__body__title": "Как JS программист<br />я умею:",
-    "js--skill__body__li-1": "Управлять DOM-ом;",
-    "js--skill__body__li-2": "Async, fetch;",
-    "js--skill__body__li-3": "Webpack;",
+    "js--skill__body__li-1": "Разделять на MVC;",
+    "js--skill__body__li-2": "Править DOM;",
+    "js--skill__body__li-3": "Async JS;",
     "js--skill__body__li-4": "React."
 }
