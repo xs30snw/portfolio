@@ -9,7 +9,7 @@ function Header() {
 
     function preventClosing(e) {
         if (e.target.nodeName !== 'INPUT') return;
-        console.info(e.target.innerText);
+        // console.info(e.target.innerText);
     };
 
     return (<>

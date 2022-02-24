@@ -4,9 +4,9 @@ function Hero() {
     const { t } = useTranslation('common');
 
     return (
-        <section className='hero'>
+        <section className='hero' aria-labelledby='hero__title'>
             <div className='container flex'>
-                <h1 className='hero__title'>
+                <h1 id='hero__title' className='hero__title'>
                     {t('hero__title')}
                 </h1>
                 <p

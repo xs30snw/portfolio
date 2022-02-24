@@ -3,12 +3,12 @@ import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import Header       from '../components/Header';
-import Hero         from '../components/Hero';
-import Skills       from '../components/Skills';
-import Techs        from '../components/Techs';
-import CTAProjects  from '../components/CTAProjects';
-import Footer       from '../components/Footer';
+import Header      from '../components/Header';
+import Hero        from '../components/Hero';
+import Skills      from '../components/Skills';
+import Techs       from '../components/Techs';
+import CTAProjects from '../components/CTAProjects';
+import Footer      from '../components/Footer';
 
 export default function Home() {
     const { t } = useTranslation('common');

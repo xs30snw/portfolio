@@ -4,8 +4,9 @@ function Skills() {
     const { t } = useTranslation('skills');
 
     return (
-        <section className='skills container flex'>
+        <section className='skills container flex' aria-labelledby='skills__title'>
             <h2
+                id='skills__title'
                 className='skills__title'
                 dangerouslySetInnerHTML={{ __html: t('skills__title') }} />
 

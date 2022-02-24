@@ -5,43 +5,36 @@
 .locale-switcher {
     display: flex;
     column-gap: .2rem;
-    cursor: pointer;
 }
 
 .locale-switcher__label {
     font-size: .8rem;
-    cursor: inherit;
 }
 
 .locale-switcher__switch {
-    appearance: none;
+    background: transparent;
     border: none;
     margin: 0;
-    cursor: inherit;
+    cursor: pointer;
 
     inline-size: 2.5rem;
 
-    display: grid;
-    grid-template-columns: [area1] 1fr [area2] 1fr;
-    place-items: center;
+    display: flex;
+    gap: .25rem;
 }
 
 .locale-switcher__switch::before,
 .locale-switcher__switch::after {
     font-size: .8rem;
-    display: grid;
-    align-items: center;
 }
 
 .locale-switcher__switch::before {
     content: "En";
-    grid-area: area1;
     font-weight: 700;
 }
 
 .locale-switcher__switch::after {
     content: "Ru";
-    grid-area: area2;
 }
 
 .locale-switcher__switch.locale-ru {

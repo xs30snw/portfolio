@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import { useTranslation } from 'next-i18next';
@@ -17,14 +17,18 @@ function LocaleSwitcher() {
         router.push({ pathname, query }, asPath, { locale: nextLocale });
     };
       
-    return (<div className='locale-switcher'>
-        <label htmlFor='locale-switch' className='locale-switcher__label'>{t('lang')}</label>
-        <input  type='checkbox'
-                role='switch' 
-                id='locale-switch' 
-                className={'locale-switcher__switch' + (router.locale === 'en' ? '' : ' locale-ru')}
-                onClick={() => changeLocale()} />
-    </div>)
+    return (
+        <div className='locale-switcher'>
+            <span className='locale-switcher__label'>{t('lang')}</span>
+            <button aria-label={
+                        router.locale === 'en'
+                            ? 'English, change to russian'
+                            : 'Russian, change to english'}
+                    id='locale-switch' 
+                    className={'locale-switcher__switch' + (router.locale === 'en' ? '' : ' locale-ru')}
+                    onClick={() => changeLocale()} />
+        </div> 
+    )
 }
 
 export default LocaleSwitcher;

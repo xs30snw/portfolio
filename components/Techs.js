@@ -17,15 +17,16 @@ function Techs() {
     const { t } = useTranslation('techs');
 
     return (
-        <section className='techs flex'>
+        <section className='techs flex' aria-labelledby='techs__title'>
             <header className='techs__header container flex'>
-                <h2 className='techs__title'>{t('techs__title')}</h2>
+                <h2 id='techs__title' className='techs__title'>{t('techs__title')}</h2>
                 <p className='techs__subtitle'>
                     {t('techs__subtitle')}
                 </p>
             </header>
-            <section className='techs__body'>
+            <section className='techs__body' aria-labelledby='techs__body__title'>
                 <h3
+                    id='techs__body__title'
                     className='techs__body__title container'
                     dangerouslySetInnerHTML={{ __html: t('techs__body__title') }} />
                 <div className='techs__scroller'>
