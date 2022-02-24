@@ -3,6 +3,7 @@
         {
             "id": "url-shortening-api-master",
             "title": "URL Shortening API Master",
+            "thumbnail": "/images/projects/shortener.png",
             "excerpt": "A landing page, where visitors can shorten their URLs via external API. Made with default Create React App, plugin react-copy-to-clipboard and Font Awesome",
             "sourceLink": "https://github.com/xs30snw/FEM_url-shortening-api-master",
             "previewLink": "https://xs30snw.github.io/FEM_url-shortening-api-master"
@@ -10,6 +11,7 @@
         {
             "id": "project-2",
             "title": "Project-2 Placeholder",
+            "thumbnail": "/images/projects/placeholder.png",
             "excerpt": "Lorem ipsum dolor sit amet.",
             "sourceLink": "#",
             "previewLink": "#"
@@ -19,6 +21,7 @@
         {
             "id": "url-shortening-api-master",
             "title": "URL Shortening API Master",
+            "thumbnail": "/images/projects/shortener.png",
             "excerpt": "Целевая страница сайта, на которой посетители могут укоротить ссылки через внешний API. Страница сделана с помощью Create React App, плагина react-copy-to-clipboard и Font Awesome",
             "sourceLink": "https://github.com/xs30snw/FEM_url-shortening-api-master",
             "previewLink": "https://xs30snw.github.io/FEM_url-shortening-api-master"
@@ -26,6 +29,7 @@
         {
             "id": "project-2",
             "title": "Проект-2 Шаблон",
+            "thumbnail": "/images/projects/placeholder.png",
             "excerpt": "Lorem ipsum dolor sit amet.",
             "sourceLink": "#",
             "previewLink": "#"
