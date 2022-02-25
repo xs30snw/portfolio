@@ -13,15 +13,15 @@
     outline-style: dashed;
 
     &.outline--html {
-        outline-color: var(--html-light);
+        outline-color: var(--html);
     }
 
     &.outline--css {
-        outline-color: var(--css-light);
+        outline-color: var(--css);
     }
 
     &.outline--js {
-        outline-color: var(--js-light);
+        outline-color: var(--js);
     }
 }
 

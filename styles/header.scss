@@ -3,7 +3,7 @@
 /* ------------------------ */
 
 .header {
-    background-color: var(--header-light);
+    background-color: var(--bg-secondary);
 }
 
 .header > .container {
@@ -28,7 +28,7 @@
 }
 
 .mobile-popup {
-    background-color: var(--surface3-light);;
+    background-color: var(--surface);;
     position: absolute;
     top: 1rem; /* equals header padding-bottom */
     left: 2rem; /* equals .mobile-popup-btn width + header padding-right */
@@ -73,7 +73,7 @@
 
 @media (min-width: 768px) {
     .header > .container {
-        align-items: baseline;
+        align-items: start;
         width: min(1024px, max(1rem, 65vw));
         max-width: none;
     }
@@ -84,5 +84,6 @@
 
     .header__misc {
         display: flex;
+        gap: .5rem;
     }
 }

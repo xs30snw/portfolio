@@ -5,6 +5,7 @@
 .locale-switcher {
     display: flex;
     column-gap: .2rem;
+    align-items: center;
 }
 
 .locale-switcher__label {
@@ -14,6 +15,7 @@
 .locale-switcher__switch {
     background: transparent;
     border: none;
+    padding: 0;
     cursor: pointer;
     height: 1.1rem;
     display: flex;

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 import LocaleSwitcher from './LocaleSwitcher';
+import ThemeSwitcher from './ThemeSwitcher';
 import { IoShapesSharp as IconMenu } from 'react-icons/io5';
 
 function Header() {
@@ -37,10 +38,12 @@ function Header() {
                     <IconMenu />
                     <ul className='mobile-popup shadow'>
                         <li><LocaleSwitcher /></li>
+                        <li><ThemeSwitcher /></li>
                     </ul>
                 </span>
 
                 <div className='header__misc'>
+                    <ThemeSwitcher />
                     <LocaleSwitcher />
                 </div> 
             </div>                       

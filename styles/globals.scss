@@ -19,28 +19,30 @@
 :root {
     --font-size: 24px;
     --font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    
+    --bg-primary:   hsl(113,  25%,  90%);
+    --bg-secondary: hsl(113   60%   82%);
+    --surface:      hsl(113,  20%,  92%);
+    --shadow:       hsla(113, 10%,  20%,  0.15);
+    --html:         hsl(18,   100%, 90%);
+    --css:          hsl(198,  100%, 75%);
+    --js:           hsl(45,   100%, 85%);
+    --text1:        hsl(113,  100%, 10%);
+    --text2:        hsl(113,  30%,  30%);
+    --link:         hsl(271,  68%,  32%);
+}
 
-    --color-sat: 113;
-
-    --header-light: hsl(113deg 60% 82%);
-
-    --text1-light: hsl(113, 100%, 10%);
-    --text2-light: hsl(113, 30%, 30%);
-
-    --surface1-light: hsl(113, 25%, 90%);
-    --surface2-light: hsl(113, 20%, 99%);
-    --surface3-light: hsl(113, 20%, 92%);
-    --surface4-light: hsl(113, 20%, 85%);
-
-    --surface-shadow-light: hsla(114, 10%, 20%, 0.15);
-    --shadow-strength-light: .02;
-
-    --html-dark: hsl(14, 79%, 52%);
-    --html-light: hsl(18, 88%, 90%);
-    --css-dark: hsl(204, 88%, 38%);
-    --css-light: hsl(198, 100%, 75%);
-    --js-dark: hsl(39, 78%, 53%);
-    --js-light: hsl(45, 100%, 85%);
+[data-theme='dark'] {
+    --bg-primary:   hsl(113,  12%,  12%);
+    --bg-secondary: hsl(113   70%   14%);
+    --surface:      hsl(113,  6%,   22%);
+    --shadow:       hsla(113, 42%,  17%,  0.75);
+    --html:         hsl(14,   100%, 32%);
+    --css:          hsl(204,  100%, 30%);
+    --js:           hsl(39,   100%, 30%);
+    --text1:        hsl(113,  15%,  85%);
+    --text2:        hsl(113,  5%,   60%);
+    --link:         hsl(271,  52%,  76%);
 }
 
 
@@ -97,7 +99,7 @@ a {
 /* ------------------------ */
 
 body {
-    background-color: var(--surface1-light);
+    background-color: var(--bg-primary);
 }
 
 .wrapper {
@@ -131,7 +133,7 @@ body {
 html {
     font-size: var(--font-size);
     font-family: var(--font-family);
-    color: var(--text1-light);
+    color: var(--text1);
 }
 
 .hero__desc-1,
@@ -152,7 +154,7 @@ html {
 .techs__card,
 .footer__address,
 .project-card__excerpt {
-    color: var(--text2-light)
+    color: var(--text2)
 }
 
 .skill__body > ul {
@@ -181,14 +183,14 @@ html {
 .cta-projects__link-projects {
     font-size: 1.5rem;
     font-weight: 700;
-    color: hsl(271, 68%, 32%);
-    border-bottom: 2px dashed var(--text1-light);
+    color: var(--link);
+    border-bottom: 2px dashed var(--text1);
 }
 
 .link,
 .cta-projects__link-github,
 .project-card__link-github {
-    color: hsl(271, 68%, 32%)
+    color: var(--link);
 }
 
 .cta-projects__link-github {
@@ -239,7 +241,7 @@ html {
 }
 
 .shadow {    
-    box-shadow: .25rem .25rem .5rem rgb(0, 0, 0, 0.15);
+    box-shadow: .25rem .25rem .5rem var(--shadow);
 }
 
 .flex {
@@ -249,19 +251,19 @@ html {
 }
 
 .link {
-    border-bottom: 2px dashed var(--text1-light) !important;
+    border-bottom: 2px dashed var(--text1) !important;
 }
 
 .link:hover,
 .link:focus {
-    border-bottom: 2px solid var(--text1-light) !important;
+    border-bottom: 2px solid var(--text1) !important;
 }
 
 .cta-projects__link-github,
 .project-card__link-github {
     display: flex;
     border-radius: 50%;
-    outline: 2px dashed var(--text1-light);
+    outline: 2px dashed var(--text1);
     outline-offset: 5px;
 }
 
@@ -284,10 +286,10 @@ html {
     z-index: 2;
     filter: blur(.25rem);
     background: repeating-linear-gradient(135deg, 
-                    hsla(0, 0%, 100%, 0), 
-                    hsla(0, 0%, 100%, 0) 1rem,
-                    var(--surface-shadow-light) 1rem, 
-                    var(--surface-shadow-light) 2rem);
+                    hsla(0, 0%, 0%, 0), 
+                    hsla(0, 0%, 0%, 0)  1rem,
+                    var(--shadow)         1rem, 
+                    var(--shadow)         2rem);
 }
 
 .bg-gradient::after {
@@ -295,10 +297,10 @@ html {
     top: -.25rem;
     left: -.25rem;
     background: repeating-linear-gradient(135deg, 
-                    hsla(0, 0%, 100%, 0), 
-                    hsla(0, 0%, 100%, 0) 1rem,
-                    var(--surface3-light) 1rem, 
-                    var(--surface3-light) 2rem);
+                    hsla(0, 0%, 0%, 0), 
+                    hsla(0, 0%, 0%, 0)  1rem,
+                    var(--surface)        1rem, 
+                    var(--surface)        2rem);
     z-index: 3;
 }
 
@@ -308,13 +310,13 @@ html {
 }
 
 .bg-gradient--html {
-    background-color: var(--html-light);
+    background-color: var(--html);
 }
 
 .bg-gradient--css {
     margin-left: auto !important;
     margin-right: auto !important;
-    background-color: var(--css-light);
+    background-color: var(--css);
     display: flex;
     align-items: center;
 
@@ -328,7 +330,7 @@ html {
 
 .bg-gradient--js {
     margin-left: auto !important;
-    background-color: var(--js-light);
+    background-color: var(--js);
 }
 
 @mixin rotated-border--bottom {
@@ -338,14 +340,14 @@ html {
     &::after {
         @include absolute-block;
         z-index: -1;
-        border-bottom: 0.5rem dashed var(--header-light);
+        border-bottom: 0.5rem dashed var(--bg-secondary);
         transform: rotate(45deg);
     }
 }
 
 @mixin rotated-border--and-top {
     &::after {
-        border-top: 0.5rem dashed var(--header-light);
+        border-top: 0.5rem dashed var(--bg-secondary);
     }
 }
 
@@ -359,7 +361,7 @@ html {
     z-index: -1;
     width: 16rem;
     height: 100%;
-    border-left: .5rem dashed var(--header-light);
+    border-left: .5rem dashed var(--bg-secondary);
     padding-left: .5rem;
 }
 
@@ -372,7 +374,7 @@ html {
 @media (min-width: 575px) {
     .hero {
         & > .container {
-            border-right: .5rem dashed var(--header-light);
+            border-right: .5rem dashed var(--bg-secondary);
             padding-right: .5rem;
         }
 
@@ -389,7 +391,7 @@ html {
     }
 
     .footer--at-index {
-        border-right: .5rem dashed var(--header-light);
+        border-right: .5rem dashed var(--bg-secondary);
         padding-right: .5rem !important;
 
         & > .footer__address {

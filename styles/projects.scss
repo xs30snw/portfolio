@@ -29,7 +29,7 @@
 
 .project-card__aside {
     padding: .5rem;
-    background-color: var(--surface3-light);
+    background-color: var(--surface);
     aspect-ratio: 1;
     grid-area: aside;
 
@@ -44,7 +44,7 @@
 
 .project-card__title {
     grid-area: header;
-    border-bottom: .5rem dashed var(--header-light);
+    border-bottom: .5rem dashed var(--bg-secondary);
     padding-bottom: .5rem;
 }
 
@@ -63,7 +63,7 @@
 .project-card__link-github {
     display: flex;
     border-radius: 50%;
-    outline: 2px dashed var(--text1-light);
+    outline: 2px dashed var(--text1);
     outline-offset: 5px;
 }
 
@@ -99,7 +99,7 @@
         height: 100%;
         top: 0;
         left: calc( min(25vw + 1.5rem, 10rem + 1.5rem) );
-        border-right: .5rem dashed var(--header-light);
+        border-right: .5rem dashed var(--bg-secondary);
     }
 
     .project-card__links {
