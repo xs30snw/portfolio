@@ -72,10 +72,10 @@
 /* QUERIES                  */
 /* ------------------------ */
 
-@media (min-width: 1024px) {
-    .projects > .projects__cards.container,
-    .projects > .projects__subtitle.container {
-        width: min(1024px, max(1rem, 65vw));
+@media (min-width: 768px) {
+    .projects__cards.container,
+    .projects__subtitle.container {
+        width: min(1024px, max(1rem, 90vw));
         max-width: none;
     }
 
@@ -106,7 +106,3 @@
         justify-content: flex-start;
     }
 }
-
-// @media (min-width: 1024px) {
-
-// }
