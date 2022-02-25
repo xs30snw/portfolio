@@ -244,12 +244,12 @@ html {
 }
 
 .link {
-    border-bottom: 2px dashed var(--text1-light);
+    border-bottom: 2px dashed var(--text1-light) !important;
 }
 
 .link:hover,
 .link:focus {
-    border-bottom: 2px solid var(--text1-light);
+    border-bottom: 2px solid var(--text1-light) !important;
 }
 
 .bg-gradient {

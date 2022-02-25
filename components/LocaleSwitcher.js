@@ -25,7 +25,7 @@ function LocaleSwitcher() {
                             ? 'English, change to russian'
                             : 'Russian, change to english'}
                     id='locale-switch' 
-                    className={'locale-switcher__switch' + (router.locale === 'en' ? '' : ' locale-ru')}
+                    className={'locale-switcher__switch link' + (router.locale === 'en' ? '' : ' locale-ru')}
                     onClick={() => changeLocale()} />
         </div> 
     )

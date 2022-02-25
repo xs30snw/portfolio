@@ -14,7 +14,7 @@ function CTAProjects() {
                 dangerouslySetInnerHTML={{ __html: t('cta-projects__title') }} />
             <div className='cta-projects__body'>
                 <Link href='/projects' passHref>
-                    <a className='cta-projects__link-projects'>
+                    <a className='cta-projects__link-projects link'>
                         {t('cta-projects__link-projects')}
                     </a>
                 </Link>
