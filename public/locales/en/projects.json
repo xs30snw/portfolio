@@ -1,5 +1,6 @@
 {
     "title": "xs30snw | Project showcase",
     "projects__title": "My projects:",
-    "projects__subtitle": "More items will be added as I progress"
+    "projects__subtitle": "More items will be added as I progress",
+    "project-card__link": "Live Preview"
 }

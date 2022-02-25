@@ -1,6 +1,11 @@
 import Image from 'next/image';
 
+import { useTranslation } from 'next-i18next';
+
+import { SiGithub as IconGithub } from 'react-icons/si';
+
 function ProjectCard({ project }) {
+    const { t } = useTranslation('projects');
 
     return (<>
         <article className='project-card'>
@@ -24,12 +29,12 @@ function ProjectCard({ project }) {
                 <ul className='project-card__links'>
                     <li>
                         <a className='project-card__link link' href={project.previewLink} target='_blank' rel='noreferrer'>
-                            Live Preview
+                            {t('project-card__link')}
                         </a>
                     </li>
                     <li>
-                        <a className='project-card__link link' href={project.sourceLink} target='_blank' rel='noreferrer'>
-                            Source
+                        <a href={project.sourceLink} target='_blank' className='project-card__link-github' rel="noreferrer">
+                            <IconGithub role='img' aria-label='GitHub' />
                         </a>
                     </li>
                 </ul>

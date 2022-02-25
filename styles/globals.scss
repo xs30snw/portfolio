@@ -186,12 +186,17 @@ html {
 }
 
 .link,
-.cta-projects__link-github {
+.cta-projects__link-github,
+.project-card__link-github {
     color: hsl(271, 68%, 32%)
 }
 
 .cta-projects__link-github {
     font-size: 3rem;
+}
+
+.project-card__link-github {
+    font-size: 1.5rem;
 }
 
 .cta-projects__note,
@@ -250,6 +255,21 @@ html {
 .link:hover,
 .link:focus {
     border-bottom: 2px solid var(--text1-light) !important;
+}
+
+.cta-projects__link-github,
+.project-card__link-github {
+    display: flex;
+    border-radius: 50%;
+    outline: 2px dashed var(--text1-light);
+    outline-offset: 5px;
+}
+
+.cta-projects__link-github:hover,
+.project-card__link-github:hover,
+.cta-projects__link-github:focus,
+.project-card__link-github:focus {
+    outline-style: solid;
 }
 
 .bg-gradient {

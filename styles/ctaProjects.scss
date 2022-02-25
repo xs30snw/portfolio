@@ -19,15 +19,3 @@
     place-items: center;
     gap: 1rem;
 }
-
-.cta-projects__link-github {
-    display: flex;
-    border-radius: 50%;
-    outline: 2px dashed var(--text1-light);
-    outline-offset: 5px;
-}
-
-.cta-projects__link-github:hover,
-.cta-projects__link-github:focus {
-    outline-style: solid;
-}
