@@ -1,13 +1,40 @@
 .theme-switch {
+    background: transparent;
     border: none;
     padding: 0;
     width: 1.75rem;
     height: 1.75rem;
     cursor: pointer;
-    background: transparent;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    position: relative;
+    top: .5rem;
 
     & > svg {
         inline-size: 100%;
         block-size: 100%;
+    }
+}
+
+.moonset__circle,
+.sunset__beams {
+    transform-origin: center center;
+    transition: .15s;
+}
+
+.theme-switch:is(:hover, :focus-visible) {
+    & .moonset__circle {
+        transform: scale(1.1);
+    }
+    
+    & .sunset__beams {
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 768px) {
+    .theme-switch {
+        position: static;
     }
 }

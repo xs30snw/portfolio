@@ -1,14 +1,28 @@
+import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
-import { WiMoonrise as IconMoon,
-         WiSunrise  as IconSun } from 'react-icons/wi';
+import IconSunset from './IconSunset';
+import IconMoonset from './IconMoonset';
 
 function ThemeSwitcher() {
     const { theme, setTheme } = useTheme();
+   
+    const [ icon, setIcon ] = useState(<IconMoonset />);
 
     function changeTheme() {
-        setTheme(theme === 'light' ? 'dark' : 'light');
+        if (theme === 'light') {
+            setTheme('dark');
+            setIcon(<IconSunset />);
+        } else {
+            setTheme('light');
+            setIcon(<IconMoonset />);
+        }
     };
+
+    useEffect(() => {
+        const t = document.documentElement.getAttribute('data-theme');
+        setIcon(t === 'light' ? <IconMoonset /> : <IconSunset />);
+    }, []);
 
     return (
         <button
@@ -17,7 +31,7 @@ function ThemeSwitcher() {
           title='Toggles light & dark'
           aria-label={'Change to ' + (theme === 'light' ? 'dark' : 'light') + ' theme'}
           onClick={() => changeTheme()}>
-            <IconMoon />
+            {icon}
         </button>
     )
 }
